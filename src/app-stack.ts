@@ -10,20 +10,21 @@ export type AppRoutes = {
   Auth: undefined;
   ProfileAdmin: undefined;
   Transactions: undefined;
-  Transaction: { id: number, vendor: string };
+  Transaction: { id: number; vendor: string };
 };
 
 export type AppNavigation = NavigationProp<AppRoutes>;
-export type AppStackScreenProps<T extends keyof AppRoutes> = NativeStackScreenProps<AppRoutes, T>;
-export type AppStackRouteProps<T extends keyof AppRoutes> = AppStackScreenProps<T>['route'];
-export type AppStackNavigationProps<T extends keyof AppRoutes> = AppStackScreenProps<T>['navigation'];
+export type AppStackScreenProps<T extends keyof AppRoutes> =
+  NativeStackScreenProps<AppRoutes, T>;
+export type AppStackRouteProps<T extends keyof AppRoutes> =
+  AppStackScreenProps<T>['route'];
+export type AppStackNavigationProps<T extends keyof AppRoutes> =
+  AppStackScreenProps<T>['navigation'];
 
 export const Stack = createStackNavigator<AppRoutes>();
 
-export const useNavigation = <T extends keyof AppRoutes>() => {
-  return useRNNavigation<AppStackNavigationProps<T>>();
-}
+export const useNavigation = <T extends keyof AppRoutes>() =>
+  useRNNavigation<AppStackNavigationProps<T>>();
 
-export const useRoute = <T extends keyof AppRoutes>() => {
-  return useRNNRoute<AppStackRouteProps<T>>();
-}
+export const useRoute = <T extends keyof AppRoutes>() =>
+  useRNNRoute<AppStackRouteProps<T>>();

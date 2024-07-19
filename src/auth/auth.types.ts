@@ -1,4 +1,4 @@
 export type User = {
-  userToken: string;
-  userRole: 'user' | 'admin';
+  user_token: string;
+  user_tole: 'user' | 'admin';
 };
