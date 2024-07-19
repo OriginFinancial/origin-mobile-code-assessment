@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "0d97b5e7-ddf7-4227-b1ee-65ae58c284b5",
+		"name": "Origin Mobile Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10628247"
+	},
+	"item": [
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user@useorigin.com\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tque3jpn1e.execute-api.us-east-1.amazonaws.com/mobile-tha/login",
+					"protocol": "https",
+					"host": [
+						"tque3jpn1e",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"mobile-tha",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "6d2b2649-9464-47ad-b185-8ca8a0b45210",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://tque3jpn1e.execute-api.us-east-1.amazonaws.com/mobile-tha/transactions?page=1&pageSize=50",
+					"protocol": "https",
+					"host": [
+						"tque3jpn1e",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"mobile-tha",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transaction Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "6d2b2649-9464-47ad-b185-8ca8a0b45210",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://tque3jpn1e.execute-api.us-east-1.amazonaws.com/mobile-tha/transactions/{id}",
+					"protocol": "https",
+					"host": [
+						"tque3jpn1e",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"mobile-tha",
+						"transactions",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Coordinates",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "6d2b2649-9464-47ad-b185-8ca8a0b45210",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Lat\": 1,\r\n    \"Lon\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tque3jpn1e.execute-api.us-east-1.amazonaws.com/mobile-tha/transactions/{id}/coordinates",
+					"protocol": "https",
+					"host": [
+						"tque3jpn1e",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"mobile-tha",
+						"transactions",
+						"{id}",
+						"coordinates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload receipt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"ReceiptImageUrl\": \"foo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://tque3jpn1e.execute-api.us-east-1.amazonaws.com/mobile-tha/transactions/1/receipt",
+					"protocol": "https",
+					"host": [
+						"tque3jpn1e",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"mobile-tha",
+						"transactions",
+						"1",
+						"receipt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
