@@ -5,7 +5,7 @@ import { Stack } from './app-stack';
 import { Auth } from './auth/auth';
 import { AuthProvider } from './auth/auth-provider';
 import { Admin } from './profile/admin/admin';
-import { Transaction } from './transactions/transaction';
+import { Transaction } from './transactions/transaction/transaction';
 import { Transactions } from './transactions/transactions';
 
 export const App = () => (

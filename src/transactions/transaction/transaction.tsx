@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
 
-import { useRoute } from '../app-stack';
+import { useRoute } from '../../app-stack';
 import { detailStyles, styles } from './transaction.style';
 
 const DetailItem = ({ label, value }: { label: string; value: string }) => (

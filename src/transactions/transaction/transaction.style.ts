@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { token } from '../_components/tokens';
+import { token } from '../../_components/tokens';
 
 export const styles = StyleSheet.create({
   container: {

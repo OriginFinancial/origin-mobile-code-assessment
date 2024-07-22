@@ -1,11 +1,12 @@
-import { TextInput as TextInputBase, StyleSheet, TextInputProps } from 'react-native';
+import { TextInput as TextInputBase, TextInputProps } from 'react-native';
 
-import { token } from './tokens';
+import { style } from './text-input.style';
 
 type Props = TextInputProps;
 
 export const TextInput = (props: Props) => {
   const {
+    nativeID,
     style: textInputStyle,
     'aria-labelledby': labelledby,
     ...textInputProps
@@ -13,24 +14,10 @@ export const TextInput = (props: Props) => {
 
   return (
     <TextInputBase
+      nativeID={nativeID}
       style={[style.input, textInputStyle]}
-      aria-labelledby={labelledby ?? props.nativeID}
+      aria-labelledby={labelledby ?? nativeID}
       {...textInputProps}
     />
   );
-}
-
-const style = StyleSheet.create({
-  input: {
-    width: '100%',
-    height: 46,
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    backgroundColor: token.color.backgroundMain,
-    color: token.color.textNeutral,
-    borderColor: token.color.secondary,
-    borderWidth: 1,
-    fontSize: 16,
-    borderRadius: 4,
-  },
-});
+};

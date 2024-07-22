@@ -12,7 +12,7 @@ module.exports = {
     ],
     quotes: ['error', 'single', { avoidEscape: true }],
     'jsx-quotes': ['error', 'prefer-double'],
-    camelcase: ['error', { properties: 'never' }],
+    camelcase: ['error', { properties: 'always' }],
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
     'react/function-component-definition': [
@@ -26,6 +26,8 @@ module.exports = {
     ],
     'react/style-prop-object': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-no-constructed-context-values': 'off',
+    'no-console': 'off',
   },
   settings: {
     react: {
@@ -38,4 +40,5 @@ module.exports = {
       jsx: true,
     },
   },
+  ignorePatterns: ['babel.config.js', 'jest.config.js', 'metro.config.js', '.eslintrc.js'],
 };

@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 
-import { type Transaction } from './transaction.types';
+import { type Transaction } from '../transaction/transaction.types';
 import { style } from './transaction-list-item.style';
 
 type Props = TouchableOpacityProps & {

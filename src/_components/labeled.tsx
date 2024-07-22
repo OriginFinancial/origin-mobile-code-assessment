@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View, type TextProps } from 'react-native';
+import { Text, View, type TextProps } from 'react-native';
 
-import { token } from './tokens';
+import { style } from './labeled.style';
 
 type LabeledProps = TextProps & {
   title: string;
@@ -17,15 +17,4 @@ export const Labeled = (props: LabeledProps) => {
       {children}
     </View>
   );
-}
-
-const style = StyleSheet.create({
-  container: {
-    width: '100%',
-    gap: 8,
-  },
-  label: {
-    fontWeight: 'bold',
-    color: token.color.textNeutral,
-  },
-});
+};

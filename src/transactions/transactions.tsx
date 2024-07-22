@@ -4,8 +4,8 @@ import { Text, View } from 'react-native';
 
 import { useNavigation } from '../app-stack';
 import { getTransactions } from './transactions-api';
-import { TransactionListItem } from './transaction-list-item';
-import { TransactionResponse } from './transaction.types';
+import { TransactionListItem } from './transaction-list/transaction-list-item';
+import { TransactionResponse } from './transaction/transaction.types';
 import { style } from './transactions.style';
 
 export const Transactions = () => {
