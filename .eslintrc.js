@@ -1,6 +1,6 @@
 // https://docs.expo.dev/guides/using-eslint/
 module.exports = {
-  extends: ['expo', 'airbnb', 'airbnb-typescript', 'prettier'],
+  extends: ['expo', 'airbnb', 'airbnb-typescript', 'plugin:prettier/recommended'],
   plugins: ['prettier'],
   rules: {
     'prettier/prettier': [
